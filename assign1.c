@@ -1,3 +1,4 @@
+// WAP to create structure Employee with member like name,id,address,salary,position and input details from user of 10 employee and sort all info. according to salary in descending order 
 #include <stdio.h>
 #include <stdlib.h>
 #include<string.h>
