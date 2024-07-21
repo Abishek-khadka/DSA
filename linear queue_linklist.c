@@ -1,21 +1,17 @@
 #include <stdio.h>
 #include <stdlib.h>
-
 struct Queue
 {
     int data;
     struct Queue *next;
 };
-
 struct Queue *front = NULL;
 struct Queue *rear = NULL;
-
 void enqueue(int item)
 {
     struct Queue *newnode = (struct Queue *)malloc(sizeof(struct Queue));
     newnode->data = item;
     newnode->next = NULL;
-
     if (front == NULL && rear == NULL)
     {
         front = newnode;
@@ -27,7 +23,6 @@ void enqueue(int item)
         rear = newnode;
     }
 }
-
 void dequeue()
 {
     if (front == NULL && rear == NULL)
@@ -47,7 +42,6 @@ void dequeue()
     printf("deleted item = %d\n", temp->data);
     free(temp);
 }
-
 void display()
 {
     if (front == NULL && rear == NULL)
@@ -64,7 +58,6 @@ void display()
     }
     printf("%d\n", temp->data);
 }
-
 int main()
 {
     int choice;
@@ -95,6 +88,5 @@ int main()
             printf("Wrong choice\n");
         }
     }
-
     return 0;
 }
